@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    padding: 10px;
+    overflow: auto;
+}
+
+.left {
+    flex: 1;
+    border-right: 1px solid #ccc;
+}
+
+.center {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    flex: 1;
+    border-left: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+#qrcode {
+    margin: 20px 0;
+    display: inline-block;
+    transform: scale(2);
+    transform-origin: center;
+    margin: 150px;
+}
+
+.history {
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;      /* セルの境界線をまとめる */
+    height: 80%;                    /* 幅を100%に */
+}
+th, td {
+    text-align: center;             /* 水平方向の中央揃え */
+    vertical-align: middle;         /* 垂直方向の中央揃え */
+}
+
+/* 小さい画面向けのレスポンシブ対応 */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .section {
+        flex: none;
+        width: 100%;
+        border: none;
+        padding: 10px;
+    }
+
+    .center {
+        order: -1; /* 中央セクションを一番上に */
+    }
+
+    #qrcode {
+        transform: scale(1); /* QRコードサイズ調整 */
+        margin: 20px;
+    }
+
+    button {
+        width: 100%; /* ボタンを横いっぱいに */
+    }
+
+    iframe {
+        height: 300px; /* iframe の高さを固定 */
+    }
+}
