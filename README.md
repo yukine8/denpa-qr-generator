@@ -1,6 +1,6 @@
 ## 電波人間用QRコードランダム生成ツール
 [https://yukine8.github.io/denpa-qr-generator](https://yukine8.github.io/denpa-qr-generator)
-長さ32のランダムな文字列をQRコードに変換するツールです。
+長さが256のランダムな文字列をQRコードに変換するツールです。
 
 ### 使い方
 -   **QRコードの再生成**: EnterキーまたはSpaceキーを押すと、新しいQRコードが生成されます。
@@ -15,7 +15,7 @@
 -   良い電波人間が出たら、ぜひTwitterやDiscordでシェアしてください
 
 ### 貢献
-バグ報告や機能追加のリクエストは、GitHubのIssueまたはPull Requestにて受け付けています。
+バグ報告や機能追加のリクエストは、GitHubのIssue、Pull Request、Twitterでも受け付けています。
 
 ### ライセンス
 MITライセンス
