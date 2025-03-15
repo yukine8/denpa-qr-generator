@@ -42,9 +42,6 @@ button {
 #qrcode {
     margin: 20px 0;
     display: inline-block;
-    transform: scale(2);
-    transform-origin: center;
-    margin: 150px;
 }
 
 .history {
@@ -78,7 +75,6 @@ th, td {
     }
 
     #qrcode {
-        transform: scale(1); /* QRコードサイズ調整 */
         margin: 20px;
     }
 

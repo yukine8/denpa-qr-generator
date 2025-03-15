@@ -13,13 +13,13 @@ function generateRandomString(length) {
 
 function generateQRCode(text) {
     qrCodeElement.innerHTML = '';
-    const randomString = text || generateRandomString(32);
+    const randomString = text || generateRandomString(256);
     qrTextElement.textContent = randomString;
 
     new QRCode(qrCodeElement, {
         text: randomString,
-        width: 200,
-        height: 200
+        width: 400,
+        height: 400
     });
 
     if (!text) {
