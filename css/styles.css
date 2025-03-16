@@ -44,8 +44,19 @@ button {
     display: inline-block;
 }
 
-.history {
-    padding: 10px;
+#qr-text {
+    word-wrap: break-word; /* 長い単語でも折り返す */
+    white-space: break-spaces; /* 改行を適用 */
+    max-width: 100%; /* 親要素の幅を超えないように */
+    overflow-wrap: break-word; /* 追加の折り返し制御 */
+    text-align: center; /* 中央揃え（好みに応じて変更） */
+    font-size: 14px; /* 読みやすくするために調整 */
+    margin: 10px;
+    padding: 5px;
+}
+
+.historyElement {
+    padding: 2px;
 }
 
 table {
