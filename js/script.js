@@ -93,15 +93,18 @@ function initialize() {
     saveBtn.addEventListener('click', saveQRCode);
 
     window.addEventListener('keydown', (event) => {
+        // キーリピートを防ぐ
+        if (event.repeat) return;
         if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault(); // デフォルト動作を抑制
             generateQRCode();
         } else if (event.key === 's' || event.key === 'S') {
+            event.preventDefault();
             saveQRCode();
         }
     });
 }
 
 window.addEventListener('load', () => {
-    console.log('Window loaded, initializing...');
     initialize();
 });
