@@ -35,10 +35,10 @@ function generateRandomString(length) {
 function generateQRCode(text) {
     qrCodeElement.innerHTML = ''; // クリア
 
-    const randomString = text || generateRandomString(127);
+    const randomString = text || generateRandomString(126);
     qrTextElement.textContent = randomString;
 
-    const qr = qrcodegen.QrCode.encodeText(randomString, qrcodegen.QrCode.Ecc.MEDIUM);
+    const qr = qrcodegen.QrCode.encodeText(randomString, qrcodegen.QrCode.Ecc.MEDIUM); //QUARTILE, HIGH
     const svgString = toSvgString(qr, 4); // 白枠4モジュール
     qrCodeElement.innerHTML = svgString;
 
@@ -107,4 +107,13 @@ function initialize() {
 
 window.addEventListener('load', () => {
     initialize();
+});
+
+const centerSection = document.querySelector('.center');
+const positionRadios = document.querySelectorAll('input[name="position"]');
+
+positionRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+        centerSection.style.justifyContent = radio.value;
+    });
 });

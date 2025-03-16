@@ -14,10 +14,20 @@
     </div>
     <div class="section center">
         <h1>電波人間用ランダムQRコード生成</h1>
+        <p><a href="https://github.com/yukine8/denpa-qr-generator">ソースコード</a></p>
         <p>長さが126のランダムな文字列をQRコードにします</p>
         <p>MITライセンスのもとで提供しており、自由に使用・改変・再配布できます</p>
-        <p>EnterかSpaceを押して再生成、Sを押して画像を保存</p>
-        <p>右の履歴をクリックしてQRコードを再表示</p>
+        <p class="pc">EnterかSpaceを押して再生成、Sを押して画像を保存</p>
+        <p class="pc">右の履歴をクリックしてQRコードを再表示</p>
+        <p class="mobile">下の履歴をクリックしてQRコードを再表示</p>
+        <div>
+            <input type="radio" id="top" name="position" value="flex-start">
+            <label for="top">上</label>
+            <input type="radio" id="center" name="position" value="center" checked>
+            <label for="center">真ん中</label>
+            <input type="radio" id="bottom" name="position" value="flex-end">
+            <label for="bottom">下</label>
+        </div>
         <div id="qrcode"></div>
         <p id="qr-text"></p>
         <button id="regenerate-btn">QRコードを再生成</button>
